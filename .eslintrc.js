@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: false,
     es2021: true,
+    node: true,
   },
   overrides: [
     {
@@ -24,7 +25,7 @@ module.exports = {
     "prettier",
   ],
   rules: {
-    "no-undef": "error",
+    "no-var": "error",
   },
   settings: {
     react: {
