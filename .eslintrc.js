@@ -1,33 +1,34 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+  env: {
+    browser: false,
+    es2021: true,
+  },
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [".eslintrc.{js,cjs}"],
     },
-    "extends": "plugin:react/recommended",
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+  ],
+  rules: {
+    "no-undef": "error",
+  },
+  settings: {
+    react: {
+      version: "detect",
     },
-    "plugins": [
-        "@typescript-eslint",
-        "react"
-    ],
-    "rules": {
-        "semi": "warn",
-        "quotes": "double"
-    }
+  },
 };
