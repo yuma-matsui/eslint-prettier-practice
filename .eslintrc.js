@@ -23,8 +23,18 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "sort-keys-custom-order"],
+  plugins: [
+    "@typescript-eslint",
+    "sort-keys-custom-order",
+    "simple-import-sort",
+    "import",
+  ],
   rules: {
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
     "sort-keys-custom-order/object-keys": [
       "error",
       { orderedKeys: ["id", "name"] },
