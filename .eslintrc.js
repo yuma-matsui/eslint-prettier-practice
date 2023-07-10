@@ -4,6 +4,13 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+  ],
   overrides: [
     {
       env: {
@@ -16,16 +23,16 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint"],
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
-  ],
+  plugins: ["@typescript-eslint", "sort-keys-custom-order"],
   rules: {
-    "no-var": "error",
+    "sort-keys-custom-order/object-keys": [
+      "error",
+      { orderedKeys: ["id", "name"] },
+    ],
+    "sort-keys-custom-order/type-keys": [
+      "error",
+      { orderedKeys: ["id", "name"] },
+    ],
   },
   settings: {
     react: {
