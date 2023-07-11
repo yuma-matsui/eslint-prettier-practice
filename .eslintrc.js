@@ -28,6 +28,7 @@ module.exports = {
     "sort-keys-custom-order",
     "simple-import-sort",
     "import",
+    "unused-imports",
   ],
   rules: {
     "import/first": "error",
@@ -43,6 +44,7 @@ module.exports = {
       "error",
       { orderedKeys: ["id", "name"] },
     ],
+    "unused-imports/no-unused-imports": "error",
   },
   settings: {
     react: {
