@@ -1,1 +1,3 @@
 .next
+.prettierignore
+yarn.lock
